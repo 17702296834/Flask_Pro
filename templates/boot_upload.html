@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}下载页{% endblock %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block page_content %}
+    <img name="pic" src="{{ newName }}" alt="图片加载失败..."><br>
+    {{ wtf.quick_form(form) }}
+{% endblock %}
+
+
+

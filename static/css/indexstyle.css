@@ -1,0 +1,30 @@
+body{
+    margin: 10px 150px;
+}
+.mybox1 {
+    position: absolute;
+    width: 700px;
+    height: 250px;
+    /*border: 1px solid bisque;*/
+    text-align: center;
+    margin: 0 auto;
+}
+.wordform {
+    display:flex;
+    flex-direction:row;
+    width: 700px;
+    /*border: 1px solid #808080;*/
+    left: auto;
+}
+.mybox2{
+    float: right;
+    text-align: center;
+    margin: 0 auto;
+}
+.wordformone {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    border: 1px solid ;
+    left: auto;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>测试系统</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+                    <span class="login100-form-title-1">
+                        测试系统编程
+                    </span>
+                </div>
+                <form role="form" class="login100-form validate-form" method="post" action="#">
+                    <fieldset>
+                        {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+                        <div class="wrap-input100 validate-input m-b-26" data-validate="用户名必填">
+                            <label for="input_name"><span class="glyphicon glyphicon-user"></span>{{form.username.label}}</label>
+                            {{form.username}}
+                            {% for err in form.username.errors %}
+                                <div class="col-md-12" id="error_name" style="color:red">
+                                    {{ err }}
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-18" data-validate="密码必填">
+                            <label for="input_password"><span class="glyphicon glyphicon-lock"></span>{{form.password.label}}</label>
+                            {{form.password}}
+                            {% for err in form.password.errors %}
+                                <div class="col-md-12" id="error_password" style="color:red">
+                                    {{ err }}
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="wrap-input100 validate-input m-b-18" data-validate="密码必填">
+                            <label for="input_repassword"><span class="glyphicon glyphicon-lock"></span>{{form.repassword.label}}</label>
+                            {{form.repassword}}
+                            {% for err in form.repassword.errors %}
+                                <div class="col-md-12" id="error_repassword" style="color:red">
+                                    {{ err }}
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        {{ form.csrf_token }}
+                        {{ form.submit }}
+                        <br>
+                        <div>
+                            <a href="{{ url_for('login') }}" class="txt1">
+                                去登录？
+                            </a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

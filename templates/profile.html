@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}添加数据页{% endblock %}
+
+{% block page_content %}
+            <form method="post" action="#">
+                {{ form.csrf_token }}
+
+                {{ form.positionName.label }} {{ form.positionName }}<br> <br>
+                {{ form.companyFullName.label }} {{ form.companyFullName }}<br> <br>
+                {{ form.companySize.label }} {{ form.companySize }}<br> <br>
+                {{ form.financeStage.label }} {{ form.financeStage }}<br> <br>
+                {{ form.secondType.label }} {{ form.secondType }}<br> <br>
+                {{ form.salary.label }} {{ form.salary }}<br> <br>
+                {{ form.workYear.label }} {{ form.workYear }}<br> <br>
+                {{form.education.label  }} {{ form.education }}<br> <br>
+
+                {{ form.submit }}
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block page_content %}
+    <h3>{{ pagination.info }}</h3><br>
+    <table class="table table-bordered" >
+    <tr>
+        <th>用户ID</th>
+        <th>公司职称</th>
+        <th>公司名称</th>
+        <th>公司大小</th>
+        <th>融资情况</th>
+        <th>职位名称</th>
+        <th>薪资范围</th>
+        <th>工作年限</th>
+        <th>职称级别</th>
+        <th>公司上市</th>
+    </tr>
+        {% for worker in workers %}
+            <tr>
+                <td>{{ worker.id }}</td>
+                <td>{{ worker.positionName }}</td>
+                <td>{{ worker.companyFullName }}</td>
+                <td>{{ worker.companySize }}</td>
+                <td>{{ worker.financeStage }}</td>
+                <td>{{ worker.secondType }}</td>
+                <td>{{ worker.salary }}</td>
+                <td>{{ worker.workYear }}</td>
+                <td>{{ worker.education }}</td>
+                <td>{{ worker.lastLogin }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    {{ pagination.links }}
+{% endblock %}
+
+

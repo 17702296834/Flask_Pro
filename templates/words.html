@@ -1,0 +1,15 @@
+{#{% extends 'index.html' %}#}
+{% block content_words %}
+    <div class="mybox1">
+        <h3>
+            分词处理
+        </h3>
+        <form action="/index.html" method="POST" name="segwords" class="wordform">
+            <textarea type="text" class="form-control" name="segword" style="height: 150px; width: 300px; font-size:18px" placeholder="输入文本内容">{{source_text}}</textarea>
+            <input type="submit", value="提交">
+            <div style="height: 150px; width: 300px; border: 1px solid #808080; overflow:auto">
+                <span style="width: 100%; height: 100%">{{seg_result}}</span>
+            </div>
+        </form>
+    </div>
+{% endblock %}
